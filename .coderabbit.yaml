@@ -1,0 +1,89 @@
+language: en-US
+tone_instructions: "Be concise and professional. Focus on actionable improvements."
+early_access: true
+enable_free_tier: true
+
+reviews:
+  profile: chill
+  request_changes_workflow: true
+  high_level_summary: true
+  high_level_summary_placeholder: "@coderabbitai summary"
+  high_level_summary_in_walkthrough: true
+  auto_title_placeholder: "@coderabbitai"
+  review_status: true
+  commit_status: true
+  fail_commit_status: true
+  collapse_walkthrough: true
+  changed_files_summary: true
+  sequence_diagrams: true
+  assess_linked_issues: true
+  related_issues: true
+  related_prs: true
+  suggested_labels: true
+  auto_apply_labels: false
+  suggested_reviewers: true
+  auto_assign_reviewers: false
+  poem: false
+  abort_on_close: true
+  disable_cache: false
+  auto_review:
+    enabled: true
+    auto_incremental_review: true
+    drafts: true
+    base_branches:
+      - main
+      - develop
+
+  # Use path filters if you want to skip certain folders like build artifacts etc
+  path_filters:
+    - "!tmp/**"
+    - "!log/**"
+    - "!node_modules/**"
+    - "**/*.rb"
+    - "**/*.ts"
+    - "**/*.tsx"
+    - "**/*.js"
+
+tools:
+  rubocop:
+    enabled: true
+  biome:
+    enabled: true
+  eslint:
+    enabled: true
+  markdownlint:
+    enabled: true
+  shellcheck:
+    enabled: true
+  gitleaks:
+    enabled: true
+  yamlLint:
+    enabled: true
+
+finishing_touches:
+  docstrings:
+    enabled: true
+
+chat:
+  auto_reply: true
+  create_issues: true
+  integrations:
+    jira:
+      usage: auto
+    linear:
+      usage: auto
+
+knowledge_base:
+  opt_out: false
+  web_search:
+    enabled: true
+  learnings:
+    scope: auto
+  issues:
+    scope: auto
+  pull_requests:
+    scope: auto
+
+code_generation:
+  docstrings:
+    language: en-US
